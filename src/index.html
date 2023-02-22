@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d8b6863ab5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Pruba Coex</title>
+</head>
+<body>
+
+    <main>
+        <section class="contenedorGeneral">
+            <div class="contenedorAdmin">
+                <div class="contenedorA">
+                    <div class="icono">
+                        <div class="iconoIncorporado">
+                            <i class="fa-solid fa-person-shelter fa-3x"></i>
+                        </div>
+                        <p>Administrador</p>
+                    </div>
+                    <div class="iconosA">
+                        <div class="inicio">
+                            <button class="buttonAdmin" id="inicio">
+                                <i class="fa-solid fa-house"></i>
+                                Inicio
+                            </button>
+                        </div>
+                        <div class="clientes">
+                            <button class="buttonAdmin" id="cliente">
+                                <i class="fa-solid fa-person"></i>
+                                Clientes
+                            </button>
+                        </div>
+                        <div class="creditos">
+                            <button class="buttonAdmin" id="creditos">
+                                <i class="fa-solid fa-sheet-plastic"></i>
+                                Creditos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cerrarSesion">
+                    <button class="cerrar">Cerrar Sesión</button>
+                </div>
+            </div>
+            <div class="contenedorMenu">
+                <nav class="inicioMenu">
+                    <h1 class="titulo">Inicio</h1>
+                </nav>
+
+                <div class="almacenandoCreditos">
+                    <div class="creditosTotal">
+                        <p>Creditos personales</p>
+                        <p>31</p>
+                    </div>
+    
+                    <div class="numeroClientes">
+                        <p>Numero de clientes</p>
+                        <p>32</p>
+                    </div>
+                </div>
+                <div class="formCliente">
+                    <form action="" class="form_contact">
+                        <h2>Envia un mensaje</h2>
+                        <div class="user_info">
+                            <label for="names">Nombres *</label>
+                            <input type="text" id="names">
+            
+                            <label for="phone">Telefono / Celular</label>
+                            <input type="text" id="phone">
+            
+                            <label for="email">Correo electronico *</label>
+                            <input type="text" id="email">
+            
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje"></textarea>
+            
+                            <input type="button" value="Enviar Mensaje" id="btnSend">
+                        </div>
+                    </form>
+                            </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

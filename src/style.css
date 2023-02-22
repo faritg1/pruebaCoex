@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(252, 238, 255);
+    font-family: 'Roboto Slab', serif;
+}
+
+.contenedorGeneral{
+    display: flex;
+}
+
+h1{
+    text-align: center;
+}
+
+.contenedorAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 20vw;
+    padding: 20px;
+    margin: 10px;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: white;
+
+}
+
+.icono{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.icono p{
+    color: blueviolet;
+}
+
+.iconosA{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenedorMenu{
+    width: 90vw;
+    margin: 10px;
+}
+
+.inicioMenu{
+    height: 7vh;
+    color: blueviolet;
+    display: grid;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+
+}
+
+.almacenandoCreditos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.creditosTotal{
+    text-align: center;
+    border-radius: 20px;
+    height: 100px;
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(245, 179, 236);
+}
+
+.numeroClientes{
+    text-align: center;
+    border-radius: 20px;
+    height: 100px;
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(245, 179, 236);
+}
+
+.cerrar{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+}
+
+.cerrar:hover{
+    background-color: rgba(136, 118, 118, 0.534);
+    color: blueviolet;
+}
+
+.buttonAdmin{
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+

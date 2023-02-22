@@ -1,0 +1,46 @@
+1)Crear nuevo cliente:
+Campos obligatorios:
+• Nombres
+• Apellidos
+• NIT/CC
+• Dirección
+• Ciudad (deben listar al menos 5 ciudades de Colombia)
+• Teléfono
+• Cupo Total
+• El cupo disponible debe llenarse automáticamente igual al cupo total
+
+create table tblClientes(
+	cedCli int(12),
+	nomCli varchar(20) not null,
+	apeCli varchar(20) not null,
+	dirCli varchar(50) not null,
+	ciuCli varchar(30) not null,
+	telCli int(20) null,
+	cupCli int(20) not null,
+	cupDisCli int(20) not null
+	CONSTRAINT pkCli PRIMARY KEY(cedCli)
+);
+
+2)Crear nuevo crédito:
+Campos obligatorios:
+• Pagaré Nro
+• Monto del crédito
+• Cuota inicial
+• Cedula del cliente (Se debe poder buscar las cedulas registradas)
+• Nombre del cliente (Deben listar los clientes registrados)
+• Fecha de crédito
+
+create table tblCredito(
+	pagCre int(12),
+	monCre int(20) not null,
+	cuoIniCre int(20) not null,
+	tasIntCre varchar(20) null,
+	fecDesCre date null,
+	cuoMenCre int(20) not null,
+	cedCliCre int(12) not null,
+	nomCliCre varchar(20) not null,
+	fecCre date null,
+	obsCre text null,
+	CONSTRAINT pkCre PRIMARY KEY(pagCre),
+	CONSTRAINT fkcedCliCre FOREIGN KEY(cedCliCre) REFERENCES tblClientes(cedCli)ON UPDATE cascade on DELETE no ACTION
+);
