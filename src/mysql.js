@@ -12,6 +12,8 @@ con.connect((err)=>{
     console.log('La conexión funciona')
 });
 
+
+
 con.query('SELECT * FROM tblClientes', (err,rows) => {
     if(err) throw err
     console.log('Los datos de la tabla son estos');
@@ -19,6 +21,4 @@ con.query('SELECT * FROM tblClientes', (err,rows) => {
     console.log('la cantidad de resultado son:');
     console.log(rows.length);
 });
-
-
 con.end();

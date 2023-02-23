@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d8b6863ab5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Pruba Coex</title>
 </head>
@@ -43,6 +42,7 @@
                 </div>
                 <div class="cerrarSesion">
                     <button class="cerrar">Cerrar Sesión</button>
+                    <p class="advertencia"></p>
                 </div>
             </div>
             <div class="contenedorMenu">
@@ -61,30 +61,102 @@
                         <p>32</p>
                     </div>
                 </div>
-                <div class="formCliente">
-                    <form action="" class="form_contact">
-                        <h2>Envia un mensaje</h2>
-                        <div class="user_info">
-                            <label for="names">Nombres *</label>
-                            <input type="text" id="names">
-            
-                            <label for="phone">Telefono / Celular</label>
-                            <input type="text" id="phone">
-            
-                            <label for="email">Correo electronico *</label>
-                            <input type="text" id="email">
-            
-                            <label for="mensaje">Mensaje *</label>
-                            <textarea id="mensaje"></textarea>
-            
-                            <input type="button" value="Enviar Mensaje" id="btnSend">
+                <div class="tableCliente">
+                    <div class="contenedorCrearCliente">
+
+                        <div class="buscarCliente">
+                            <input type="text" placeholder="Nombre, NIT/CC">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
+
+                        <div class="buttonCrearCliente">
+                            <button type="submit" class="crearCliente">Crear Cliente</button>
+                        </div>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>NIC</td>
+                            <td>Nombre</td>
+                            <td>Apellido</td>
+                            <td>Direccion</td>
+                            <td>Ciudad</td>
+                            <td>Telefono</td>
+                            <td>Cupo Disponible</td>
+                            <td>Estado</td>
+                            <td>Acciones</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2">
+                                <button class="buttonActualizar">Actualizar</button>
+                                <button>Eliminar</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="contenedorFormulario">
+                    <h4>Datos Personales</h4>
+
+                    <form action="#" id="formulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Ingrese su nombre">
+
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" placeholder="Ingrese su apellido">
+
+                        <label for="apellido">Cupo Total</label>
+                        <input type="text" id="apellido" placeholder="--- --- ---">
+
+                        <label for="apellido">Nit/CC</label>
+                        <input type="text" id="apellido" placeholder="1097****66">
+
+                        <label for="apellido">Dirección</label>
+                        <input type="text" id="apellido" placeholder="CRA 7 / CALLE 8 ">
+
+                        <label for="apellido">Cupo Disponible</label>
+                        <input type="text" id="apellido" placeholder="--- --- --- ">
+
+                        <label for="apellido">Ciudad</label>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value="">Bucaramanga</option>
+                            <option value="">Cali</option>
+                            <option value="">Bogota</option>
+                            <option value="">Barranquilla</option>
+                            <option value="">Medellín</option>
+                        </select>
+
+                        <label for="apellido">Teléfono</label>
+                        <input type="text" id="apellido" placeholder="320*******">
+
+                        <label for="apellido">Dia de Gracias</label>
+                        <input type="text" id="apellido" placeholder="*">
+
+                        <label for="">Estado del Credito</label>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value="">Activo</option>
+                            <option value="">Desactivo</option>
+                        </select>
+
+                        <button type="submit">Guardar Cambios</button>
+
+
                     </form>
-                            </div>
+                </div>
             </div>
         </section>
-
     </main>
     <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/d8b6863ab5.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

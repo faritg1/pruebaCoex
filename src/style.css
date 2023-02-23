@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: rgb(252, 238, 255);
+    background-color: rgba(241, 209, 248, 0.637);
     font-family: 'Roboto Slab', serif;
 }
 
@@ -116,6 +116,26 @@ h1{
     border: none;
     cursor: pointer;
 }
+
+.formCliente{
+    border: 1px solid black;
+}
+
+table{
+    width: 100%;
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+
+.contenedorCrearCliente{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
 
 
 
