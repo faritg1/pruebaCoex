@@ -8,18 +8,19 @@ const tableCliente = document.querySelector('.tableCliente');
 const buttonActualizar = document.querySelector('.buttonActualizar');
 const contenedorMenu = document.querySelector('.contenedorMenu');
 const contenedorFormulario = document.querySelector('.contenedorFormulario');
-const cerrarSesion = document.querySelector('.cerrar');
-const advertencia = document.querySelector('.advertencia');
+const crearCliente = document.querySelector('.crearCliente');
+const contenedorNuevoCliente = document.querySelector('.contenedorNuevoCliente');
 
 tableCliente.style.visibility = 'collapse';
 contenedorFormulario.style.visibility = 'collapse';
-
+contenedorNuevoCliente.style.visibility = 'collapse';
 
 inicio.addEventListener('click', () => {
     titulo.innerHTML = 'Inicio';
     almacenandoCreditos.style.visibility = 'visible';
     almacenandoCreditos.style.height = '50vh'
     tableCliente.style.visibility = 'collapse';
+    contenedorNuevoCliente.style.visibility = 'collapse';
 });
 
 cliente.addEventListener('click', () => {
@@ -28,6 +29,7 @@ cliente.addEventListener('click', () => {
     almacenandoCreditos.style.height = '0'
     tableCliente.style.visibility = '50vh'
     tableCliente.style.visibility = 'visible';
+    contenedorNuevoCliente.style.visibility = 'collapse';
 });
 
 buttonActualizar.addEventListener('click', () => {
@@ -35,12 +37,120 @@ buttonActualizar.addEventListener('click', () => {
     tableCliente.style.visibility = 'collapse';
     contenedorAdmin.style.visibility = 'collapse';
     contenedorAdmin.style.width = '0';
-    contenedorMenu.style.height = '100vw';
     contenedorFormulario.style.visibility = 'visible';
 });
+
+crearCliente.addEventListener('click', () =>{
+    titulo.innerHTML = 'Nuevo cliente';
+    contenedorNuevoCliente.style.visibility = 'visible';
+    tableCliente.style.visibility = 'collapse';
+    
+}); 
 
 /* cerrarSesion.addEventListener('click', () => {
     setTimeout( () => {
         advertencia.innerHTML = 'Soy el admin';
     }, 1000)
-}) */
+})  */
+
+
+/*Creando base de datos con js*/
+
+let listaClientes = [];
+
+const objClientes = {
+    nombre: '',
+    apellido: '',
+    cc: '',
+    direccion: '',
+    telefono: '',
+    cupoTotal: '',
+    cupoDisponible: ''
+}
+
+let editando = false;
+
+const formulario = document.querySelector('#formulario');
+const nombreCli = document.querySelector('#nombre');
+const apellidoCli = document.querySelector('#apellido');
+const ccCli = document.querySelector('#cc');
+const direccionCli = document.querySelector('#direccion');
+const telefonoCli = document.querySelector('#telefono');
+const cupoTotalCli = document.querySelector('#cupoTotal');
+const cupoDisponibleCli = document.querySelector('#cupoDisponible');
+const diaGracia = document.querySelector('#diaGracia');
+const btnAgregar = document.querySelector('#btnAgregar');
+
+formulario.addEventListener('submit', validar);
+
+function showError(message){
+    const alert = document.createElement('p');
+    alert.classList.add('alert-message');
+    alert.innerHTML = message;
+
+    formulario.appendChild(alert);
+    setTimeout(() => {
+        alert.remove();
+    }, 3000);
+}
+
+function validar(e){
+    e.preventDefault();
+    if(nombreCli.value === '' || apellidoCli.value === ''){
+        showError('¡Vacío!');
+            return;
+    }
+
+    if(editando){
+        //editandoCliente();
+        editando = false;
+    }else{
+        objClientes.nombre = nombreCli.value;
+        objClientes.apellido = apellidoCli.value;
+        objClientes.cc = ccCli.value;
+        objClientes.direccion = direccionCli.value;
+        objClientes.telefono = telefonoCli.value;
+        objClientes.cupoTotal = cupoTotalCli.value;
+        objClientes.cupoDisponible = cupoDisponibleCli.value;
+
+        agregarCliente();
+    }
+}
+
+function agregarCliente(){
+    listaClientes.push({...objClientes});
+
+    mostrarCliente();
+}
+
+function mostrarCliente(){
+    const  tableClientes = document.querySelector('.div-empleados');
+
+    listaClientes.forEach(cliente => {
+        const {nombre,apellido,cc,direccion,telefono,cupoTotal,cupoDisponible} = cliente;
+
+        const parrafo = document.createElement('p');
+        parrafo.textContent = `${nombre} - ${apellido} - ${cc} - ${direccion} - ${telefono} - ${cupoTotal} - ${cupoDisponible}`
+
+        parrafo.dataset.cc = cc;
+
+        const editarBoton = document.createElement('button');
+        //editarBoton.onclick = () => cargarCliente(cliente);
+        editarBoton.textContent = 'Editar';
+        editarBoton.classList.add('btn','btn-editar');
+        parrafo.append(editarBoton);
+
+        const eliminarBotn = document.createElement('button');
+        //eliminarBotn.onclick = () => eliminarCliente(cc);
+        eliminarBotn.textContent = 'Eliminar';
+        eliminarBotn.classList.add('btn','btn-eliminar');
+        parrafo.append(eliminarBotn);
+
+        const hr = document.createElement('hr');
+
+        tableClientes.appendChild(parrafo);
+        tableClientes.appendChild(hr);
+    });
+} 
+
+

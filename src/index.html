@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Pruba Coex</title>
+    <title>Prueba Coex</title>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
                         <div class="iconoIncorporado">
                             <i class="fa-solid fa-person-shelter fa-3x"></i>
                         </div>
-                        <p>Administrador</p>
+                        <p>Admin</p>
                     </div>
                     <div class="iconosA">
                         <div class="inicio">
@@ -52,13 +52,20 @@
 
                 <div class="almacenandoCreditos">
                     <div class="creditosTotal">
-                        <p>Creditos personales</p>
-                        <p>31</p>
+                        <div class="creditosP">
+                            <p>Créditos</p>
+                            <p class="tituloP">31</p>
+                        </div>
+
+                        <div class="iconoCredito">
+                            <i class="fa-solid fa-credit-card fa-2x"></i>                       
+                        </div>
                     </div>
-    
+
                     <div class="numeroClientes">
-                        <p>Numero de clientes</p>
-                        <p>32</p>
+                        <p>Número de clientes</p>
+                        <p class="tituloP">32</p>
+                        <i class="fa-solid fa-person-circle-check fa-2x"></i>  
                     </div>
                 </div>
                 <div class="tableCliente">
@@ -74,7 +81,7 @@
                         </div>
                     </div>
                     <table>
-                        <tr>
+                        <tr class="trCol">
                             <td>NIC</td>
                             <td>Nombre</td>
                             <td>Apellido</td>
@@ -96,7 +103,7 @@
                             <td></td>
                             <td rowspan="2">
                                 <button class="buttonActualizar">Actualizar</button>
-                                <button>Eliminar</button>
+                                <button class="buttonEliminar">Eliminar</button>
                             </td>
                         </tr>
                     </table>
@@ -105,7 +112,7 @@
                 <div class="contenedorFormulario">
                     <h4>Datos Personales</h4>
 
-                    <form action="#" id="formulario">
+                    <form action="#">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" placeholder="Ingrese su nombre">
 
@@ -148,10 +155,50 @@
                         </select>
 
                         <button type="submit">Guardar Cambios</button>
-
-
                     </form>
                 </div>
+
+                <div class="contenedorNuevoCliente">
+                    <h4>Datos Personales</h4>
+
+                    <form action="#" id="formulario">
+                        <label for="nombre">Nombre</label> 
+                        <input type="text" id="nombre" placeholder="Ingrese su nombre">
+
+                        <label for="apellido">Apellido</label> 
+                        <input type="text" id="apellido" placeholder="Ingrese su apellido">
+
+                        <label for="cupoTotal">Cupo Total</label> 
+                        <input type="text" id="cupoTotal" placeholder="--- --- ---">
+
+                        <label for="cc">Nit/CC</label> 
+                        <input type="text" id="cc" placeholder="1097****66">
+
+                        <label for="direccion">Dirección</label> 
+                        <input type="text" id="direccion" placeholder="CRA 7 / CALLE 8 ">
+
+                        <label for="cupoDisponible">Cupo Disponible</label> 
+                        <input type="text" id="cupoDisponible" placeholder="--- --- --- ">
+
+                        <label for="ciudad">Ciudad</label>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value="">Bucaramanga</option>
+                            <option value="">Cali</option>
+                            <option value="">Bogota</option>
+                            <option value="">Barranquilla</option>
+                            <option value="">Medellín</option>
+                        </select>
+
+                        <label for="telefono">Teléfono</label> 
+                        <input type="text" id="telefono" placeholder="320*******">
+
+                        <label for="diaGracia">Dia de Gracias</label> 
+                        <input type="text" id="diaGracia" placeholder="*">
+
+                        <button type="submit" id="btnAgregar">Guardar Cambios</button>
+                    </form> 
+
             </div>
         </section>
     </main>
