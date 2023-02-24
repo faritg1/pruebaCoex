@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Prueba Coex</title>
 </head>
+
 <body>
 
     <main>
@@ -58,14 +60,14 @@
                         </div>
 
                         <div class="iconoCredito">
-                            <i class="fa-solid fa-credit-card fa-2x"></i>                       
+                            <i class="fa-solid fa-credit-card fa-2x"></i>
                         </div>
                     </div>
 
                     <div class="numeroClientes">
                         <p>Número de clientes</p>
                         <p class="tituloP">32</p>
-                        <i class="fa-solid fa-person-circle-check fa-2x"></i>  
+                        <i class="fa-solid fa-person-circle-check fa-2x"></i>
                     </div>
                 </div>
                 <div class="tableCliente">
@@ -112,49 +114,64 @@
                 <div class="contenedorFormulario">
                     <h4>Datos Personales</h4>
 
-                    <form action="#">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                    <form action="#" id="formulario">
 
-                        <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido" placeholder="Ingrese su apellido">
+                        <div class="formFormulario">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                        </div>
 
-                        <label for="apellido">Cupo Total</label>
-                        <input type="text" id="apellido" placeholder="--- --- ---">
 
-                        <label for="apellido">Nit/CC</label>
-                        <input type="text" id="apellido" placeholder="1097****66">
+                        <div class="formFormulario">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" placeholder="Ingrese su apellido">
+                        </div>
 
-                        <label for="apellido">Dirección</label>
-                        <input type="text" id="apellido" placeholder="CRA 7 / CALLE 8 ">
+                        <div class="formFormulario">
+                            <label for="cupoTotal">Cupo Total</label>
+                            <input type="text" id="cupoTotal" placeholder="--- --- ---">
+                        </div>
 
-                        <label for="apellido">Cupo Disponible</label>
-                        <input type="text" id="apellido" placeholder="--- --- --- ">
 
-                        <label for="apellido">Ciudad</label>
-                        <select name="" id="">
-                            <option value=""></option>
-                            <option value="">Bucaramanga</option>
-                            <option value="">Cali</option>
-                            <option value="">Bogota</option>
-                            <option value="">Barranquilla</option>
-                            <option value="">Medellín</option>
-                        </select>
+                        <div class="formFormulario">
+                            <label for="cc">Nit/CC</label>
+                            <input type="text" id="cc" placeholder="1097****66">
+                        </div>
 
-                        <label for="apellido">Teléfono</label>
-                        <input type="text" id="apellido" placeholder="320*******">
 
-                        <label for="apellido">Dia de Gracias</label>
-                        <input type="text" id="apellido" placeholder="*">
+                        <div class="formFormulario">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" id="direccion" placeholder="CRA 7 / CALLE 8 ">
+                        </div>
 
-                        <label for="">Estado del Credito</label>
-                        <select name="" id="">
-                            <option value=""></option>
-                            <option value="">Activo</option>
-                            <option value="">Desactivo</option>
-                        </select>
+                        <div class="formFormulario">
+                            <label for="cupoDisponible">Cupo Disponible</label>
+                            <input type="text" id="cupoDisponible" placeholder="--- --- --- ">
+                        </div>
 
-                        <button type="submit">Guardar Cambios</button>
+                        <div class="formFormulario">
+                            <label for="ciudad">Ciudad</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="">Bucaramanga</option>
+                                <option value="">Cali</option>
+                                <option value="">Bogota</option>
+                                <option value="">Barranquilla</option>
+                                <option value="">Medellín</option>
+                            </select>
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" id="telefono" placeholder="320*******">
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="diaGracia">Dia de Gracias</label>
+                            <input type="text" id="diaGracia" placeholder="*">
+                        </div>
+
+                        <button type="submit" id="btnAgregar">Guardar Cambios</button>
                     </form>
                 </div>
 
@@ -162,48 +179,131 @@
                     <h4>Datos Personales</h4>
 
                     <form action="#" id="formulario">
-                        <label for="nombre">Nombre</label> 
-                        <input type="text" id="nombre" placeholder="Ingrese su nombre">
 
-                        <label for="apellido">Apellido</label> 
-                        <input type="text" id="apellido" placeholder="Ingrese su apellido">
+                        <div class="formFormulario">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                        </div>
 
-                        <label for="cupoTotal">Cupo Total</label> 
-                        <input type="text" id="cupoTotal" placeholder="--- --- ---">
 
-                        <label for="cc">Nit/CC</label> 
-                        <input type="text" id="cc" placeholder="1097****66">
+                        <div class="formFormulario">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" placeholder="Ingrese su apellido">
+                        </div>
 
-                        <label for="direccion">Dirección</label> 
-                        <input type="text" id="direccion" placeholder="CRA 7 / CALLE 8 ">
+                        <div class="formFormulario">
+                            <label for="cupoTotal">Cupo Total</label>
+                            <input type="text" id="cupoTotal" placeholder="--- --- ---">
+                        </div>
 
-                        <label for="cupoDisponible">Cupo Disponible</label> 
-                        <input type="text" id="cupoDisponible" placeholder="--- --- --- ">
 
-                        <label for="ciudad">Ciudad</label>
-                        <select name="" id="">
-                            <option value=""></option>
-                            <option value="">Bucaramanga</option>
-                            <option value="">Cali</option>
-                            <option value="">Bogota</option>
-                            <option value="">Barranquilla</option>
-                            <option value="">Medellín</option>
-                        </select>
+                        <div class="formFormulario">
+                            <label for="cc">Nit/CC</label>
+                            <input type="text" id="cc" placeholder="1097****66">
+                        </div>
 
-                        <label for="telefono">Teléfono</label> 
-                        <input type="text" id="telefono" placeholder="320*******">
 
-                        <label for="diaGracia">Dia de Gracias</label> 
-                        <input type="text" id="diaGracia" placeholder="*">
+                        <div class="formFormulario">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" id="direccion" placeholder="CRA 7 / CALLE 8 ">
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="cupoDisponible">Cupo Disponible</label>
+                            <input type="text" id="cupoDisponible" placeholder="--- --- --- ">
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="ciudad">Ciudad</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="">Bucaramanga</option>
+                                <option value="">Cali</option>
+                                <option value="">Bogota</option>
+                                <option value="">Barranquilla</option>
+                                <option value="">Medellín</option>
+                            </select>
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" id="telefono" placeholder="320*******">
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="diaGracia">Dia de Gracias</label>
+                            <input type="text" id="diaGracia" placeholder="*">
+                        </div>
 
                         <button type="submit" id="btnAgregar">Guardar Cambios</button>
-                    </form> 
+                    </form>
+                </div>
 
-            </div>
+                <div class="contenedorCredito">
+                    <form action="#" id="formulario">
+
+                        <div class="formFormulario">
+                            <label for="pagare">Pagaré Nro.</label>
+                            <input type="text" id="pagare" placeholder="Ingrese su pagare">
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="monto">Monto del crédito</label>
+                            <input type="text" id="monto" placeholder="Ingrese su monto">
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="cupoTotal">Cupo Inicial</label>
+                            <input type="text" id="cupoInicial" placeholder="--- --- ---">
+                        </div>
+
+
+                        <div class="formFormulario">
+                            <label for="interes">Tasa de interes</label>
+                            <input type="text" id="interes" placeholder="--- --- ---">
+                        </div>
+
+
+                        <div class="formFormulario">
+                            <label for="fecha">Fecha de desembolso</label>
+                            <input type="date" id="fecha" placeholder="dd/mm//aaaa">
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="cuotas">cuotas mensuales</label>
+                            <input type="text" id="cuotas" placeholder="--- --- ---">
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="cliente">Cliente</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="">Bucaramanga</option>
+                                <option value="">Cali</option>
+                                <option value="">Bogota</option>
+                                <option value="">Barranquilla</option>
+                                <option value="">Medellín</option>
+                            </select>
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="fechaCredito">Fecha del crédito</label>
+                            <input type="date" id="fechaCredito" placeholder="dd/mm/aaaa">
+                        </div>
+
+                        <div class="formFormulario">
+                            <label for="">Observacion</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Observacion"></textarea>
+                        </div>
+
+                        <button type="submit" id="btnAgregar">Guardar Cambios</button>
+                    </form>
+                </div>
         </section>
     </main>
     <script src="./main.js"></script>
     <script src="https://kit.fontawesome.com/d8b6863ab5.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

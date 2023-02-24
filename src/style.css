@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgba(241, 209, 248, 0.637);
     font-family: 'Roboto Slab', serif;
 }
 
-.contenedorGeneral{
+.contenedorGeneral {
     display: flex;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-.contenedorAdmin{
+.contenedorAdmin {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +33,7 @@ h1{
     background-color: white;
 }
 
-.icono{
+.icono {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,11 +41,11 @@ h1{
     margin-top: 50px;
 }
 
-.icono p{
+.icono p {
     color: blueviolet;
 }
 
-.iconosA{
+.iconosA {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -53,12 +54,12 @@ h1{
     gap: 10px;
 }
 
-.contenedorMenu{
+.contenedorMenu {
     width: 90vw;
     margin: 10px;
 }
 
-.inicioMenu{
+.inicioMenu {
     height: 7vh;
     color: blueviolet;
     display: grid;
@@ -68,7 +69,7 @@ h1{
 
 }
 
-.almacenandoCreditos{
+.almacenandoCreditos {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +78,7 @@ h1{
     margin-top: 10px;
 }
 
-.creditosTotal{
+.creditosTotal {
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
@@ -89,12 +90,12 @@ h1{
     box-shadow: 10px 10px 10px rgb(245, 179, 236);
 }
 
-.iconoCredito{
+.iconoCredito {
     display: grid;
     align-items: center;
 }
 
-.numeroClientes{
+.numeroClientes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,16 +103,17 @@ h1{
     gap: 3px;
 }
 
-.tituloP{
+.tituloP {
     color: rgb(0, 174, 255);
-    font-size:x-large;
+    font-size: x-large;
 }
 
-.fa-credit-card, .fa-person-circle-check{
+.fa-credit-card,
+.fa-person-circle-check {
     color: rgb(0, 153, 255);
 }
 
-.numeroClientes{
+.numeroClientes {
     border-radius: 20px;
     height: 110px;
     width: 300px;
@@ -120,7 +122,7 @@ h1{
     box-shadow: 10px 10px 10px rgb(245, 179, 236);
 }
 
-.cerrar{
+.cerrar {
     height: 30px;
     width: 100px;
     border-radius: 10px;
@@ -129,21 +131,23 @@ h1{
     color: white;
 }
 
-.cerrar:hover{
+.cerrar:hover {
     background-color: rgba(136, 118, 118, 0.534);
     color: blueviolet;
 }
 
-.buttonAdmin{
+.buttonAdmin {
     border: none;
     cursor: pointer;
+    background-color: white;
+    font-size: large;
 }
 
-.formCliente{
+.formCliente {
     border: 1px solid black;
 }
 
-.tableCliente{
+.tableCliente {
     background-color: white;
     height: auto;
     padding: 10px;
@@ -151,29 +155,29 @@ h1{
     border-radius: 10px;
 }
 
-table{
+table {
     text-align: center;
     margin-top: 20px;
     width: 100%;
 }
 
-.trCol{
+.trCol {
     background-color: blueviolet;
     color: white;
 }
 
-td{
+td {
     padding: 10px;
 }
 
-.contenedorCrearCliente{
+.contenedorCrearCliente {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.buscarCliente{
+.buscarCliente {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -183,19 +187,19 @@ td{
 
 }
 
-.buscarCliente input{
+.buscarCliente input {
     border: none;
     height: 30px;
 }
 
-.fa-magnifying-glass{
+.fa-magnifying-glass {
     color: rgb(0, 153, 255);
     padding: 5px;
     background-color: rgb(174, 223, 247);
     border-radius: 4px;
 }
 
-.crearCliente{
+.crearCliente {
     height: 40px;
     width: 100px;
     border-radius: 10px;
@@ -204,13 +208,13 @@ td{
     color: white;
 }
 
-.crearCliente:hover{
+.crearCliente:hover {
     background-color: rgba(136, 118, 118, 0.534);
     color: blueviolet;
     cursor: pointer;
 }
 
-.buttonActualizar{
+.buttonActualizar {
     height: 30px;
     width: 70px;
     border-radius: 10px;
@@ -219,12 +223,12 @@ td{
     color: white;
 }
 
-.buttonActualizar:hover{
+.buttonActualizar:hover {
     background-color: rgb(0, 153, 255);
     cursor: pointer;
 }
 
-.buttonEliminar{
+.buttonEliminar {
     height: 30px;
     width: 70px;
     border-radius: 10px;
@@ -233,20 +237,60 @@ td{
     color: white;
 }
 
-.buttonEliminar:hover{
+.buttonEliminar:hover {
     background-color: rgb(255, 0, 0);
     cursor: pointer;
 }
 
+.contenedorNuevoCliente {
+    display: grid;
+    align-items: center;
+    background-color: aqua;
+}
+
+#formulario {
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.formFormulario {
+    display: grid;
+    gap: 5px;
+}
+
+#btnAgregar {
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    display: grid;
+    align-items: center;
+}
+
+#btnAgregar:hover {
+    background-color: rgba(136, 118, 118, 0.534);
+    color: blueviolet;
+    cursor: pointer;
+}
 
 
 /* probando */
 .alert-message {
     font-size: 20px;
     margin: 24px 0 0;
-    color: red!important;
+    color: red !important;
     text-align: center;
 }
+
 
 .btn {
     padding: 5px 10px;
@@ -264,17 +308,7 @@ td{
     background-color: red;
 }
 
-.div-empleados{
+.div-empleados {
     border: 1px solid black;
     height: 100px;
-} 
-
-
-
-
-
-
-
-
-
-
+}

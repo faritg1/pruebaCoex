@@ -10,10 +10,16 @@ const contenedorMenu = document.querySelector('.contenedorMenu');
 const contenedorFormulario = document.querySelector('.contenedorFormulario');
 const crearCliente = document.querySelector('.crearCliente');
 const contenedorNuevoCliente = document.querySelector('.contenedorNuevoCliente');
+const contenedorCredito = document.querySelector('.contenedorCredito');
 
 tableCliente.style.visibility = 'collapse';
 contenedorFormulario.style.visibility = 'collapse';
 contenedorNuevoCliente.style.visibility = 'collapse';
+tableCliente.style.height = '0';
+contenedorFormulario.style.height = '0';
+contenedorNuevoCliente.style.height = '0';
+contenedorCredito.style.height = '0';
+contenedorCredito.style.visibility = 'collapse';
 
 inicio.addEventListener('click', () => {
     titulo.innerHTML = 'Inicio';
@@ -21,15 +27,20 @@ inicio.addEventListener('click', () => {
     almacenandoCreditos.style.height = '50vh'
     tableCliente.style.visibility = 'collapse';
     contenedorNuevoCliente.style.visibility = 'collapse';
+    tableCliente.style.height = '0';
+    contenedorFormulario.style.height = '0';
+    contenedorNuevoCliente.style.height = '0';
+    contenedorCredito.style.visibility = 'collapse';
 });
 
 cliente.addEventListener('click', () => {
     titulo.innerHTML = 'Clientes';
     almacenandoCreditos.style.visibility = 'collapse';
     almacenandoCreditos.style.height = '0'
-    tableCliente.style.visibility = '50vh'
     tableCliente.style.visibility = 'visible';
+    tableCliente.style.height = 'auto';
     contenedorNuevoCliente.style.visibility = 'collapse';
+    contenedorCredito.style.visibility = 'collapse';
 });
 
 buttonActualizar.addEventListener('click', () => {
@@ -38,14 +49,25 @@ buttonActualizar.addEventListener('click', () => {
     contenedorAdmin.style.visibility = 'collapse';
     contenedorAdmin.style.width = '0';
     contenedorFormulario.style.visibility = 'visible';
+    contenedorCredito.style.visibility = 'collapse';
 });
 
-crearCliente.addEventListener('click', () =>{
+crearCliente.addEventListener('click', () => {
     titulo.innerHTML = 'Nuevo cliente';
     contenedorNuevoCliente.style.visibility = 'visible';
     tableCliente.style.visibility = 'collapse';
-    
-}); 
+    contenedorCredito.style.visibility = 'collapse';
+});
+
+creditos.addEventListener('click', () => {
+    titulo.innerHTML = 'Nuevo crédito';
+    contenedorCredito.style.visibility = 'visible';
+    almacenandoCreditos.style.visibility = 'collapse';
+    tableCliente.style.visibility = 'collapse';
+    contenedorNuevoCliente.style.visibility = 'collapse';
+    contenedorCredito.style.height = 'auto';
+    almacenandoCreditos.style.height = '0';
+})
 
 /* cerrarSesion.addEventListener('click', () => {
     setTimeout( () => {
@@ -83,7 +105,7 @@ const btnAgregar = document.querySelector('#btnAgregar');
 
 formulario.addEventListener('submit', validar);
 
-function showError(message){
+function showError(message) {
     const alert = document.createElement('p');
     alert.classList.add('alert-message');
     alert.innerHTML = message;
@@ -94,17 +116,17 @@ function showError(message){
     }, 3000);
 }
 
-function validar(e){
+function validar(e) {
     e.preventDefault();
-    if(nombreCli.value === '' || apellidoCli.value === ''){
+    if (nombreCli.value === '' || apellidoCli.value === '') {
         showError('¡Vacío!');
-            return;
+        return;
     }
 
-    if(editando){
+    if (editando) {
         //editandoCliente();
         editando = false;
-    }else{
+    } else {
         objClientes.nombre = nombreCli.value;
         objClientes.apellido = apellidoCli.value;
         objClientes.cc = ccCli.value;
@@ -117,17 +139,17 @@ function validar(e){
     }
 }
 
-function agregarCliente(){
-    listaClientes.push({...objClientes});
+function agregarCliente() {
+    listaClientes.push({ ...objClientes });
 
     mostrarCliente();
 }
 
-function mostrarCliente(){
-    const  tableClientes = document.querySelector('.div-empleados');
+function mostrarCliente() {
+    const tableClientes = document.querySelector('.div-empleados');
 
     listaClientes.forEach(cliente => {
-        const {nombre,apellido,cc,direccion,telefono,cupoTotal,cupoDisponible} = cliente;
+        const { nombre, apellido, cc, direccion, telefono, cupoTotal, cupoDisponible } = cliente;
 
         const parrafo = document.createElement('p');
         parrafo.textContent = `${nombre} - ${apellido} - ${cc} - ${direccion} - ${telefono} - ${cupoTotal} - ${cupoDisponible}`
@@ -137,13 +159,13 @@ function mostrarCliente(){
         const editarBoton = document.createElement('button');
         //editarBoton.onclick = () => cargarCliente(cliente);
         editarBoton.textContent = 'Editar';
-        editarBoton.classList.add('btn','btn-editar');
+        editarBoton.classList.add('btn', 'btn-editar');
         parrafo.append(editarBoton);
 
         const eliminarBotn = document.createElement('button');
         //eliminarBotn.onclick = () => eliminarCliente(cc);
         eliminarBotn.textContent = 'Eliminar';
-        eliminarBotn.classList.add('btn','btn-eliminar');
+        eliminarBotn.classList.add('btn', 'btn-eliminar');
         parrafo.append(eliminarBotn);
 
         const hr = document.createElement('hr');
@@ -151,6 +173,6 @@ function mostrarCliente(){
         tableClientes.appendChild(parrafo);
         tableClientes.appendChild(hr);
     });
-} 
+}
 
 
